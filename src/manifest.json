@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Art Sketch",
+    "version": "1.0.0",
+    "description": "Employee helper for my company.",
+
+    "icons": {
+        "16": "assets/icon/icon16.png",
+        "48": "assets/icon/icon32.png",
+        "128": "assets/icon/icon200.png"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "options_page": "options.html",
+    "browser_action": {
+        "default_icon": {
+            "48": "assets/icon/icon32.png"
+        },
+        "default_popup": "popup.html"
+    },
+    "chrome_url_overrides": {
+        "newtab": "tabs.html"
+    },
+    "permissions": ["storage"]
+}
