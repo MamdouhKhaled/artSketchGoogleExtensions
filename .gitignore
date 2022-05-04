@@ -2,3 +2,5 @@ node_modules
 build.crx
 build.pem
 yarn.lock
+/dist
+/.idea

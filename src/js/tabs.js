@@ -1,6 +1,5 @@
-// Get Style 
-import "../scss/tabs.scss";
-/**
- * Import Todo List Script
- */
-import "./tabs/task";
+import { createApp } from 'vue'
+
+const app = createApp({})
+import Tabs from './tabs/components/tabs'
+createApp(Tabs).mount('#app')
