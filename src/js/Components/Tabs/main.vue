@@ -10,7 +10,7 @@
         </form>
       </div>
     </div>
-    <div class="flex py-5 gap-4 h-[90%] flex-row">
+    <div class="flex py-5 gap-4 h-[95%] flex-row">
       <div class="basis-1/3 p-5 bg-slate-50 rounded shadow-md">
         <h2>Favourite Web Page </h2>
         <div class="fav-page">

@@ -1,14 +1,22 @@
 // tailwind.config.js
 module.exports = {
     content: [
-        './src/js/tabs/components/*.vue',
+        './src/js/Components/Tabs/*.vue',
+        './src/js/Components/*.vue',
         './src/js/*.js',
         './src/scss/*.scss',
         './src/*.html',
     ],     // This key was called 'purge' in Tailwind CSS v2
-    darkMode: false, // or 'media' or 'class'
+    darkMode: 'class', // or 'media' or 'class'
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                primary: "#1a2236",
+                secondary: "#2e364a",
+                textColor: "#c0d7db",
+                linesColor: "#f00"
+            }
+        },
     },
     variants: {
         extend: {},

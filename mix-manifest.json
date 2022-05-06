@@ -2,12 +2,13 @@
     "/dist/assets/js/popup.js": "/dist/assets/js/popup.js",
     "/dist/assets/js/tabs.js": "/dist/assets/js/tabs.js",
     "/dist/assets/css/tabs.css": "/dist/assets/css/tabs.css",
+    "/dist/assets/css/popup.css": "/dist/assets/css/popup.css",
     "/dist/assets/images/logo.png": "/dist/assets/images/logo.png",
     "/dist/assets/icon/icon16.png": "/dist/assets/icon/icon16.png",
     "/dist/assets/icon/icon200.png": "/dist/assets/icon/icon200.png",
     "/dist/assets/icon/icon32.png": "/dist/assets/icon/icon32.png",
+    "/dist/options.html": "/dist/options.html",
     "/dist/popup.html": "/dist/popup.html",
     "/dist/tabs.html": "/dist/tabs.html",
-    "/dist/manifest.json": "/dist/manifest.json",
-    "/dist/assets/css/popup.css": "/dist/assets/css/popup.css"
+    "/dist/manifest.json": "/dist/manifest.json"
 }

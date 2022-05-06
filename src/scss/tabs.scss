@@ -2,4 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css?family=Karla:weight@400;700&display=swap");
-html, body {height: 100%;}
+html, body {
+  height: 100%;
+}
+
+.btn {
+  @apply p-1.5 bg-sky-400 hover:opacity-75 hover:shadow border border-gray-300 rounded-br rounded-tr;
+}
+
+.text-input {
+  @apply p-1.5 bg-white rounded-bl border-gray-300 rounded-tl outline-0 border focus:border-sky-500;
+}

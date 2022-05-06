@@ -1,5 +1,8 @@
 import { createApp } from 'vue'
+import Tabs from './Components/app'
+import store from "./Store/index";
 
-const app = createApp({})
-import Tabs from './tabs/components/tabs'
-createApp(Tabs).mount('#app')
+
+const app = createApp(Tabs).use(store).mount('#app');
+
+
