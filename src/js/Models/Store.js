@@ -1,7 +1,7 @@
-class Store {
+class Task {
     static getTasks() {
-        return localStorage.getItem("tasks") === null ? [] :
-            JSON.parse(localStorage.getItem("tasks"));
+        return JSON.parse(localStorage.getItem("tasks")) ?? []
+
     }
 
     static addTask(task) {
@@ -26,4 +26,4 @@ class Store {
     }
 }
 
-module.exports = Store
+module.exports = Task

@@ -1,32 +1,39 @@
-import {createStore} from "vuex";
-
+import {createStore} from 'vuex'
+import Task from "../Models/Store"
 export default createStore({
-    state () {
+    state() {
         return {
-            count: 0,
             tasks: []
         }
     },
     mutations: {
-        increment(state) {
-            state.count++
+        GET_TASKS(state) {
+            return state.tasks;
         },
-        setTask(state, task){
-            let old = state.tasks
-            state.tasks = old.push(task)
+        INIT_TASKS(state) {
+            state.tasks = Task.getTasks()
+
+            console.log(state.tasks);
         },
-        getTasks(state){
-            return state.tasks
-        }
-    },
-    actions:{
-        Tasks: ()=>{
-            return localStorage.getItem("tasks") ?? []
+        ADD_TASK(state, task) {
+            let item = {
+                "id": state.tasks.length+1,
+                "title" : task,
+                "time" : (new Date()).getTime(),
+                "description": "No Description",
+                "completed" : false,
+                "deleted" : false,
+            }
+            state.tasks.push(item)
+            Task.addTask(item)
+        },
+        UPDATE_TASK(state, Task){
+
         }
     },
     getters: {
-        tasks : (state) =>{
-
+        getTasks(state) {
+            return state.tasks;
         }
     }
 })
