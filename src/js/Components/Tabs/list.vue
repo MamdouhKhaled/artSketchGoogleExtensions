@@ -1,7 +1,7 @@
 <template>
-    <div class=" h-[90%] overflow-hidden">
+    <div class="h-5/6">
         <ListHead/>
-        <ul class="h-full mt-2 no-scrollbar overflow-y-scroll">
+        <ul class="h-full overflow-y-auto mt-2 no-scrollbar">
             <Item v-for="(task, index) in tasks" :item="task" :key='index'/>
         </ul>
     </div>
@@ -24,7 +24,6 @@ export default {
     computed:{
         tasks(){
             return store.getters.getTasks
-            // return []
         }
     }
 }

@@ -19,8 +19,10 @@ export default {
     },
     methods:{
         addTask(){
-            if(this.task.length >= 3)
-                store.commit('ADD_TASK', this.task)
+            if(this.task.length >= 3){
+                store.dispatch('add_task', this.task)
+                this.task = ""
+            }
         }
     }
 }

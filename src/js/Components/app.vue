@@ -16,6 +16,8 @@
             </Card>
         </div>
         <Foot/>
+        <button @click="isOpen = !isOpen">asdasdas</button>
+        <Modal :Open=isOpen />
     </div>
 </template>
 
@@ -25,8 +27,26 @@ import Foot from "./footer";
 import Card from "./card";
 import List from "./Tabs/list";
 import MostVisit from "./Tabs/most-visit";
+import Modal from "./modal";
 
 export default {
-    components: {Head, Foot, Card, List, MostVisit},
+    components: {Modal, Head, Foot, Card, List, MostVisit},
+    data(){
+        return {
+            isOpen : false
+        }
+    }
 }
 </script>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 2s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+</style>

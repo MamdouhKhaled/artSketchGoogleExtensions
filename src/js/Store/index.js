@@ -12,12 +12,11 @@ export default createStore({
         },
         INIT_TASKS(state) {
             state.tasks = Task.getTasks()
-
-            console.log(state.tasks);
         },
         ADD_TASK(state, task) {
+
             let item = {
-                "id": state.tasks.length+1,
+                "id": (new Date()).getTime(),
                 "title" : task,
                 "time" : (new Date()).getTime(),
                 "description": "No Description",
@@ -27,7 +26,32 @@ export default createStore({
             state.tasks.push(item)
             Task.addTask(item)
         },
-        UPDATE_TASK(state, Task){
+        UPDATE_TASK(state, item){
+            console.log('Update',item);
+        },
+        REMOVE_TASK(state, item){
+            let id = state.tasks.map((task) => task.id).indexOf(item.id);
+            state.tasks.splice(id, 1);
+            Task.removeTask(id)
+        }
+    },
+    actions:{
+        get_tasks({commit}) {
+            return commit('GET_TASKS');
+        },
+        init_tasks({commit}) {
+            return commit('INIT_TASKS');
+        },
+        add_task({commit}, task){
+            commit('ADD_TASK', task)
+        },
+        edit_task({commit}, task){
+            commit('UPDATE_TASK', task)
+        },
+        remove_task({commit}, task){
+            commit('REMOVE_TASK', task)
+        },
+        completed({commit}, task){
 
         }
     },
